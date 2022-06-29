@@ -1,0 +1,10 @@
+let resultado = document.getElementById("num");
+let resultado2 = document.getElementById("resultado")
+let num = Number(window.prompt('Digite um número:'));
+resultado.innerHTML = `Seu número é ${num} <br />`;
+resultado2.innerHTML = `Raiz quadrada: ${num ** 0.5} <br />`;
+resultado2.innerHTML += `${num} é inteiro: ${Number.isInteger(num)} <br />`;
+resultado2.innerHTML += `é NaN: ${Number.isNaN(num)} <br />`;
+resultado2.innerHTML += `Arredondando para baixo: ${Math.floor(num)} <br />`;
+resultado2.innerHTML += `Arredondando para cima: ${Math.floor(num)} <br />`;
+resultado2.innerHTML += `Com duas casas decimais: ${num.toFixed(2)}`;
