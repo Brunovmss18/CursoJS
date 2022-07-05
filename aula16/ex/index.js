@@ -1,5 +1,5 @@
 let resultado = document.getElementById("num");
-let resultado2 = document.getElementById("resultado")
+let resultado2 = document.getElementById("resultado");
 let num = Number(window.prompt('Digite um número:'));
 resultado.innerHTML = `Seu número é ${num} <br />`;
 resultado2.innerHTML = `Raiz quadrada: ${num ** 0.5} <br />`;
