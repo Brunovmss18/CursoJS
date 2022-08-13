@@ -26,8 +26,18 @@ body {
   border-radius: 10px;
 }
 
-p#IMC {
-  
+.conteudo {
+  display: inline-block;
+  line-height: 2em;
+}
+
+p#p1 {
+  padding-left: 110px;
+}
+
+.input {
+  padding: 1em;
+  width: 600px;
 }
 
 form input, form label, form button {

@@ -13,8 +13,9 @@
 
   <section class="container">
     <h1>Tabela IMC</h1>
-    <p><strong>IMC</strong></p>
-    <p id="IMC">
+    <p class="conteudo">
+      <strong>IMC</strong>
+      <br>
       Menos do que 18,5
       <br>
       Entre 18,5 e 24,9
@@ -27,6 +28,29 @@
       <br>
       Mais do que 40
     </p>
+    <p class="conteudo" id="p1">
+      <strong>Resultado</strong>
+      <br>
+      Abaixo do peso
+      <br>
+      Peso normal
+      <br>
+      Sobrepeso
+      <br>
+      Obesidade grau 1
+      <br>
+      Obesidade grau 2
+      <br>
+      Obesidade grau 3
+    </p>
+    <h1>Calcule seu IMC</h1>
+    <p>Peso:</p>
+    <input type="text" name="" id="peso" class="input">
+    <p>Altura:</p>
+    <input type="text" name="" id="altura" class="input">
+    <br>
+    <br>
+    <input type="button" value="Calcular" class="input" onclick="clicar()">
   </section>
 
   <script src="./assets/js/main.js"></script>
