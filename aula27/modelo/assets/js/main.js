@@ -1,5 +1,6 @@
 function clicar() {
-    peso = Number(window.document.getElementById('peso'));
-    altura = Number(window.document.getElementById('altura'));
-
+    let peso = document.getElementById("peso");
+    let altura = document.getElementById("altura");
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = Number(altura);
 }
