@@ -35,5 +35,4 @@ function clicar() {
             resultado.innerHTML = `Seu IMC é ${imc.toFixed(2)} (Obesidade grau 3)`;
         } 
     }
-    console.log(Number(altura) !== NaN);
 }
