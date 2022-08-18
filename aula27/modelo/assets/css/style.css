@@ -40,6 +40,13 @@ p#p1 {
   width: 600px;
 }
 
+#botao {
+  border: #115666;
+  background: #115666;
+  font-weight: bolder;
+  color: white;
+}
+
 form input, form label, form button {
   display: block;
   width: 100%;
