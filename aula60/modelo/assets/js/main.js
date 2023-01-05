@@ -79,14 +79,14 @@ calculadora.inicia();
 */
 
 function Calculadora() {
-    const display = document.querySelector('display');
+    this.display = document.querySelector('.display');
     
     this.inicia = function() {
-        cliqueBotoes();
-        pressionaEnter();
+        this.cliqueBotoes();
+        this.pressionaEnter();
     };
 
-    let pressionaEnter = function() {
+    this.pressionaEnter = function() {
         this.display.addEventListener('keyup', function(e) {
             if(e.keyCode === 13) {
                 this.realizaConta();
@@ -94,16 +94,16 @@ function Calculadora() {
         });
     };
 
-     let clearDisplay = function() {
-        display.value = '';
+     this.clearDisplay = function() {
+        this.display.value = '';
     };
 
-    let apagaUm = function() {
-        display.value = display.value.slice(0, -1);
+    this.apagaUm = function() {
+        this.display.value = this.display.value.slice(0, -1);
     };
 
-     let realizaConta = function() {
-        let conta = display.value;
+     this.realizaConta = function() {
+        let conta = this.display.value;
 
         try {
             conta = eval(conta);
@@ -113,44 +113,44 @@ function Calculadora() {
                 return;
             }
 
-            display.value = String(conta);
+            this.display.value = String(conta);
         } catch(e) {
             alert('Conta inválida');
             return;
         }
     };
 
-    let cliqueBotoes = function() {
+    this.cliqueBotoes = function() {
         document.addEventListener('click', function(e) {
             const el = e.target;
 
             if(el.classList.contains('btn-num')) {
-                btnParaDisplay(el.innerText);
+                this.btnParaDisplay(el.innerText);
             }
     
             if(el.classList.contains('btn-clear')) {
-                clearDisplay();
+                this.clearDisplay();
             }
     
             if(el.classList.contains('btn-del')) {
-                apagaUm();
+                this.apagaUm();
             }
     
             if(el.classList.contains('btn-eq')) {
-                realizaConta();
+                this.realizaConta();
             }
     
-            display.focus();
+            this.display.focus();
 
         }.bind(this));
 
     };
 
-    let btnParaDisplay = function(valor) {
-        display.value += valor;  
+    this.btnParaDisplay = function(valor) {
+        this.display.value += valor;  
     };
     
 }
 
-const c = new Calculadora();
-c.inicia();
+const calculadora = new Calculadora();
+calculadora.inicia();
